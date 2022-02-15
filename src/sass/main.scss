@@ -1,0 +1,37 @@
+html{
+    font-size: 62.5%;
+    min-height: 100%;
+
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    // background-color: $main-color;
+    min-height: 100vh;
+
+}
+
+
+.main-header{
+    height: 10rem;
+    // padding-left: 30rem;
+}
+
+.home{
+    min-height: 100vh;
+    background-image: url("../images/goodread_home.png");
+    background-size: cover;
+    opacity: 1;
+}
+
+.home-card{
+    margin-top: -5rem;
+    border-radius: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .home-card{
+        margin-top: 4rem;
+    }
+  }
