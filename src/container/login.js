@@ -1,14 +1,14 @@
-import React from 'react';
-import BlankHeader from '../utils/blankHeader';
+import React from "react";
+import BlankHeader from "../utils/blankHeader";
+import Loginform from "../component/Login/loginForm";
 
 function login(props) {
-    return (
-        <div>
-            <BlankHeader/>
-            <h1>Login Page</h1>
-            
-        </div>
-    );
+  return (
+    <div className="login">
+      <BlankHeader />
+      <Loginform/>
+    </div>
+  );
 }
 
 export default login;

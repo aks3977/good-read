@@ -1,3 +1,137 @@
+.form-control, .form-control:focus, .input-group-addon {
+  border-color: #e1e1e1;
+}
+
+.login {
+  min-height: 100vh;
+  background-image: url("../images/form-background.jpg");
+  background-size: cover;
+}
+
+.signup-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+input {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.signup-form form {
+  color: black;
+  border-radius: 3rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  -webkit-box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.signup-form h1 {
+  color: black;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.signup-form hr {
+  margin: 0 -3rem 2rem;
+}
+
+.signup-form .form-group {
+  margin-bottom: 2rem;
+}
+
+.signup-form label {
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+
+.signup-form .form-control {
+  min-height: 5rem;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.signup-form .input-group-addon {
+  max-width: 4.2rem;
+  text-align: center;
+}
+
+.signup-form input[type="checkbox"] {
+  margin-top: 0.2rem;
+}
+
+.signup-form a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.signup-form a:hover {
+  text-decoration: none;
+}
+
+.signup-form form a {
+  color: #19aa8d;
+  text-decoration: none;
+}
+
+.signup-form form a:hover {
+  text-decoration: underline;
+}
+
+.signup-form .fa {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-right: 0.7rem;
+}
+
+.signup-form .fa-paper-plane {
+  font-size: 18px;
+}
+
+.signup-form .fa-check {
+  color: #fff;
+  left: 1.7rem;
+  top: 1.8rem;
+  font-size: 0.7rem;
+  position: absolute;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.form-group:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.my-btn {
+  height: 5rem;
+  width: 15rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .signup-form {
+    width: 85%;
+  }
+}
+
 html {
   font-size: 62.5%;
   min-height: 100%;

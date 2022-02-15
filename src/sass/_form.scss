@@ -1,0 +1,128 @@
+// @import "../SCSS/mixin";
+
+.form-control, .form-control:focus, .input-group-addon {
+    border-color: #e1e1e1;
+}
+// .form-control, .btn {        
+//     border-radius: 3px;
+// }
+.login{
+    min-height:100vh;
+    background-image: url("../images/form-background.jpg");
+    background-size: cover;
+}
+.signup-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    // border: 1px solid black;
+}
+input{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.signup-form form {
+    color: black;
+    border-radius: 3rem;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    // border: 1px solid black;
+}
+.signup-form h1 {
+    color: black;
+    font-weight: bold;
+    margin-top: 0;
+}
+.signup-form hr {
+    margin: 0 -3rem 2rem;
+}
+.signup-form .form-group {
+    margin-bottom: 2rem;
+}
+.signup-form label {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+.signup-form .form-control {
+    min-height: 5rem;
+    box-shadow: none !important;
+    font-size: 1.8rem;
+    font-weight: bold;
+}	
+.signup-form .input-group-addon {
+    max-width: 4.2rem;
+    text-align: center;
+}
+.signup-form input[type="checkbox"] {
+    margin-top: 0.2rem;
+}   
+.signup-form .btn{        
+    // @include mybtn
+    // font-size: 16px;
+    // font-weight: bold;
+    // background: #19aa8d;
+    // border: none;
+    // min-width: 140px;
+}
+// .signup-form .btn:hover, .signup-form .btn:focus {
+//     background: #179b81;
+//     outline: none;
+// }
+.signup-form a {
+    color: #fff;	
+    text-decoration: underline;
+}
+.signup-form a:hover {
+    text-decoration: none;
+}
+.signup-form form a {
+    color: #19aa8d;
+    text-decoration: none;
+}	
+.signup-form form a:hover {
+    text-decoration: underline;
+}
+.signup-form .fa {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-right: 0.7rem;
+}
+.signup-form .fa-paper-plane {
+    font-size: 18px;
+}
+.signup-form .fa-check {
+    color: #fff;
+    left: 1.7rem;
+    top: 1.8rem;
+    font-size: 0.7rem;
+    position: absolute;
+}
+p{
+    font-size: 1.5rem;
+}
+
+.form-group:last-child{
+    display: flex;
+    justify-content: center;
+}
+
+.error{
+    color:red;
+    font-weight: bold;
+}
+
+.my-btn{
+    height: 5rem;
+    width:15rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+}
+//media query 
+
+@media only screen and (max-width: 600px) {
+    .signup-form{
+        width:85%;
+    }
+  }

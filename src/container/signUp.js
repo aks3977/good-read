@@ -1,13 +1,14 @@
-import React from 'react';
-import BlankHeader from '../utils/blankHeader';
+import React from "react";
+import BlankHeader from "../utils/blankHeader";
+import Signupform from "../component/Signup/signupForm";
 
 function signUp(props) {
-    return (
-        <div>
-            <BlankHeader/>
-            <h1>signUp page</h1>
-        </div>
-    );
+  return (
+    <div className="login">
+      <BlankHeader />
+      <Signupform/>
+    </div>
+  );
 }
 
 export default signUp;
