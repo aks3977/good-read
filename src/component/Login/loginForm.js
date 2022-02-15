@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import axios from "axios";
 
 function Loginform(props) {
   const initialValue = {
@@ -42,10 +43,35 @@ function Loginform(props) {
     }
   }, [handleOnChange]);
 
+  const login = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:5000/api/auth/login", {
+        email,
+        password,
+      })
+      .then((response) => {
+        console.log("login response", response);
+        localStorage.setItem(
+          "login",
+          JSON.stringify({
+            userLogin: true,
+            token: response.data.access_token,
+          })
+        );
+        setError("");
+        history.push("/dashboard");
+      })
+      .catch((error) => {
+        setError(error.response.data.message.toUpperCase());
+      });
+  };
+
+
   return (
     <>
       <div className="signup-form">
-        <form>
+        <form onSubmit={login}>
         {error && <p className="error">{error}</p>}
 
           <h1 className="text-center">Sign in to goodreads</h1>
@@ -120,6 +146,8 @@ function Loginform(props) {
             <a
               className="text-primary h3"
               onClick={() => history.push("/signup")}
+              style={{cursor:"pointer"}}
+
             >
               sign up
             </a>

@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import axios from "axios";
 
 function Signupform(props) {
     const history = useHistory();
@@ -84,12 +85,40 @@ function Signupform(props) {
               setIsvalidConfirmPassword(true);
             }
           }, [handleOnChange]);
+
+          const register = (e) => {
+            e.preventDefault();
+            axios
+              .post("http://localhost:5000/api/auth/register", {
+                email,
+                password,
+                mobile_number,
+                name,
+                username,
+              })
+              .then((response) => {
+                console.log("register response", response);
+                localStorage.setItem(
+                  "login",
+                  JSON.stringify({
+                    userLogin: true,
+                    token: response.data.access_token,
+                  })
+                );
+                setError("");
+                history.push("/dashboard");
+              })
+              .catch((error) => {
+                setError(`${error.response.data.message} !`.toUpperCase());
+              });
+          };
+        
         
     
   return (
     <>
       <div class="signup-form">
-        <form>
+        <form onSubmit={register}>
           <h1>Register</h1>
           <p>Please fill in this form to create an account!</p>
           <hr />
@@ -281,6 +310,7 @@ function Signupform(props) {
           <p className="text-center">
             <a
               className="text-primary h3"
+              style={{cursor:"pointer"}}
               onClick={() => history.push("/login")}
             >
               Sign In
