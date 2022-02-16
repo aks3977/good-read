@@ -123,6 +123,8 @@ function Signupform(props) {
           <p>Please fill in this form to create an account!</p>
           <hr />
           <div class="form-group">
+          {error && <p className="error">{error}</p>}
+
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-user"></i>
