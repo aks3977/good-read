@@ -10,6 +10,7 @@ body{
     font-weight: 300;
     // background-color: $main-color;
     min-height: 100vh;
+    min-width: 100vw;
 
 }
 
@@ -39,9 +40,50 @@ body{
 
   .Dashboard{
       padding: 5rem;
+      background-image: url("../images/form-background.jpg");
+      min-height: 100vh;
+
   }
 
   th,td{
       font-size: 2rem;
   }
+  .modal-paragraph{
+      font-weight: bold;
+      font-size: 2rem;
+  }
+
+  .header-btn{
+      min-width: 10rem;
+      min-height: 5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 2rem;
+  }
+
+  .header-nav{
+      font-size: 2.5rem;
+      margin-left: 30rem;
+  }
+
+  .details{
+    min-height: 100vh;
+    background-image: url("../images/form-background.jpg");
+
+  }
+  @media only screen and (max-width: 768px) {
+    .header-nav{
+        margin-left: 5rem;
+        // color:lightgray
+    }
+    .Dashboard{
+        padding:0;
+    }
+    .header-nav{
+        font-size: 1.5rem;
+
+    }
+  }
+
+
 

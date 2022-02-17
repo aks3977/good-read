@@ -4,6 +4,8 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { loadBooks } from "../redux/Actions";
 import Pagination from "../component/Dashboard/Pagination";
+import Modal from "../component/Dashboard/Modal";
+import MainHeader from "../utils/mainHeader";
 
 function Dashboard(props) {
   const dispatch = useDispatch();
@@ -12,10 +14,7 @@ function Dashboard(props) {
   const [recordsPerPage, setRecordsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
   const history = useHistory();
-  const logout = () => {
-    localStorage.removeItem("login");
-    history.push("/");
-  };
+  const [modalData, setModalData] = useState({});
 
   useEffect(() => {
     setLoading(true);
@@ -34,11 +33,13 @@ function Dashboard(props) {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
+  console.log("modalData",modalData);
+
   return (
-    <div className="Dashboard">
-      <h1>welcome to Dashboard!!!</h1>
-      <button onClick={() => logout()}>Logout</button>
-      <table class="table table-warning">
+    <>
+    <MainHeader/>
+        <div className="Dashboard">
+      <table class="table table-light">
         <thead>
           <tr>
             {/* <th scope="col">Sl. no.</th> */}
@@ -49,11 +50,13 @@ function Dashboard(props) {
         </thead>
         <tbody>
             {currentPost.map((data,index)=>(
-          <tr key={index}>
+          <tr key={data.key}>
           {/* <th scope="row">1</th> */}
-          <td>{data.title}</td>
+          <td><a type="button" onClick={()=>setModalData(data)} data-toggle="modal"  data-target="#exampleModalCenter">{data.title}</a></td>
           <td>{data.author_name}</td>
           <td>8/10</td>
+          {/* <Modal index={index}/> */}
+
         </tr>
 
             ))}
@@ -66,7 +69,11 @@ function Dashboard(props) {
       paginate={paginate}
       />
       </div>
+      <Modal modalData={modalData}/>
+
     </div>
+    </>
+
   );
 }
 
