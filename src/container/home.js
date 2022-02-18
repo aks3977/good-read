@@ -8,14 +8,12 @@ function Home(props) {
       <BlankHeader />
       <div
         className="card home-card"
-        style={{ width: "40rem", height: "50rem", float: "right" }}
       >
         <div className="card-body">
           <h5 className="card-title h1 text-center">Discover And Read More</h5>
           <a
             href="#"
-            className="btn btn-dark"
-            style={{ minWidth: "100%", height: "5rem", fontSize: "2rem", marginTop:"3rem"}}
+            className="btn btn-dark signup-btn"
             onClick={()=>props.history.push("/signup")}
           >
             Sign Up with Email
@@ -26,8 +24,7 @@ function Home(props) {
           </p>
           <a
             // href="#"
-            className="btn btn-danger"
-            style={{ minWidth: "100%", height: "5rem", fontSize: "2rem" }}
+            className="btn btn-danger signin-btn"
             onClick={()=>props.history.push("/login")}
 
           >

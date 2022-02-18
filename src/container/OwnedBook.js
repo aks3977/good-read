@@ -7,7 +7,7 @@ function ownedBook(props) {
     <>
       <MainHeader />
       <div className="ownedbook">
-        <div className="container" style={{ paddingTop: "3rem" }}>
+        <div className="container ownedbook-container">
           <h1>List of Owned Books</h1>
 
           <ul className="list-group mt-5">

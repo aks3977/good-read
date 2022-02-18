@@ -131,14 +131,13 @@ function Dashboard(props) {
           </table>
         )}
         {loading === true && (
-          <div className="container text-center" style={{ minWidth: "100%" }}>
+          <div className="container text-center loader">
             <img src={Download} />
           </div>
         )}
 
         <div
-          className="container"
-          style={{ display: "flex", justifyContent: "center" }}
+          className="container pagination-div"
         >
           {!loading &&
           <Pagination
