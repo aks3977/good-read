@@ -2,7 +2,9 @@ import { bindActionCreators } from "redux";
 import * as types from "./ActionTypes";
 
 const initialState = {
-    books: []
+    books: [],
+    ownedBooksCollection:[],
+    ownedBook:{}
 }
 
 const bookReducers = (state=initialState, action) => {
@@ -11,6 +13,11 @@ const bookReducers = (state=initialState, action) => {
             return{
                 ...state,
                 books:action.payload
+            }
+        case types.ADD_OWNED_BOOKS:
+            return{
+                ...state,
+                ownedBooksCollection:action.payload
             }
         default:
             return state;

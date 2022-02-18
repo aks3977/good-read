@@ -5,6 +5,7 @@ import Login from "../container/login";
 import signUp from '../container/signUp';
 import Dashboard from '../container/dashboard';
 import DetailsPage from '../container/DetailsPage';
+import ownedBook from '../container/OwnedBook';
 
 function AppRoute(props) {
 
@@ -44,6 +45,7 @@ function AppRoute(props) {
                 <PublicRoute path = "/signup" component={signUp}/>
                 <PrivateRoute path = "/dashboard" component={Dashboard}/>
                 <PrivateRoute path = "/details" component={DetailsPage}/>
+                <PrivateRoute path = "/ownedbook" component={ownedBook}/>
 
             </Switch>
 
